@@ -105,7 +105,7 @@ router.post("/login", async (req, res, next) => {
           email: user.email,
           admin: user.isAdmin,
         },
-        process.env.JWT_KEY,
+        "1TvH2QBqMX72ZtA7kay0kYiGovWKbCZbGZI",
         {
           expiresIn: "1h",
         }

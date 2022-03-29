@@ -24,11 +24,15 @@ app.get("/", (req, res) => {
 });
 // connect to db
 try {
-  mongoose.connect(process.env.DB_CONNECTION, { UseNewUrlParser: true }, () => {
-    console.log("connected to db on 8000");
-  });
+  mongoose.connect(
+    "mongodb+srv://unixy:Q77Bq3a8NTC2tny@cluster0.h56hv.mongodb.net/adopteunig?retryWrites=true",
+    { UseNewUrlParser: true },
+    () => {
+      console.log("connected to db on 8000");
+    }
+  );
 } catch (error) {
   console.log(error);
 }
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);

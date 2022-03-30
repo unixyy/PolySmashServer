@@ -8,7 +8,9 @@ require("dotenv").config();
 app.use(bodyparser.json());
 app.use(express.json());
 // import routers
-app.use(cors({ origin: "polysmash.netlify.app", optionSuccesStatus: 204 }));
+app.use(
+  cors({ origin: "https://polysmash.netlify.app", optionSuccesStatus: 204 })
+);
 app.use("/api/users", require("./users"));
 app.use("/api/choices", require("./choices"));
 app.use("/api/news", require("./news"));

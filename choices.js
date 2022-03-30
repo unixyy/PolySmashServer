@@ -83,10 +83,10 @@ router.put("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/", async (req, res) => {
   try {
     const removedchoice = await choices.findByIdAndRemove({
-      _id: req.params.id,
+      _id: req.body.id,
     });
     res.send(removedchoice);
   } catch (error) {

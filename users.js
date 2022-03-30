@@ -5,15 +5,15 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
-router.get("/", async (req, res) => {
-  try {
-    users.find({}, { password: 0 }).then((user) => {
-      return res.send(user);
-    });
-  } catch (error) {
-    return res.status(404).send(error);
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     users.find({}, { password: 0 }).then((user) => {
+//       return res.send(user);
+//     });
+//   } catch (error) {
+//     return res.status(404).send(error);
+//   }
+// });
 
 // get a specific user from ID
 router.get("/:id", async (req, res) => {
